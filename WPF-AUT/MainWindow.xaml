@@ -1,0 +1,19 @@
+﻿<Window x:Class="WPF_AUT.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_AUT"
+        mc:Ignorable="d"
+        Title="WPF Calculator" Height="450" Width="800">
+    <StackPanel><TextBlock Text="Enter First Number" />
+        <TextBox Height="23" TextWrapping="Wrap" Name="FirstNumber" />
+        <TextBlock Text="Enter Second Number" />
+        <TextBox Height="23" TextWrapping="Wrap" Name="SecondNumber" />
+        <Button Content="Add Button" Click="Add_Button_Click" Name="Add_Button"/>
+        <Button Content="Substract Button"/>
+        <TextBlock TextWrapping="Wrap" Text="Results" Name="ResultsBlock" />
+
+    </StackPanel>
+
+</Window>
