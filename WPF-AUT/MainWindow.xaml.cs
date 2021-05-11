@@ -23,6 +23,7 @@ namespace WPF_AUT
         public MainWindow()
         {
             InitializeComponent();
+            DateText.Text = DateTime.Now.ToShortDateString();
         }
 
         private void Add_Button_Click(object sender, RoutedEventArgs e)
@@ -30,6 +31,22 @@ namespace WPF_AUT
             decimal total = Convert.ToDecimal(FirstNumber.Text) + Convert.ToDecimal(SecondNumber.Text);
             ResultsBlock.Text = total.ToString();
 
+        }
+
+        private void Substract_Button_Click(object sender, RoutedEventArgs e)
+        {
+            decimal total = Convert.ToDecimal(FirstNumber.Text) - Convert.ToDecimal(SecondNumber.Text);
+            ResultsBlock.Text = total.ToString();
+        }
+
+        private void Greeting_Action(object sender, RoutedEventArgs e)
+        {
+            ResultsBlock.Text = "Hello, " + Username.Text;
+        }
+
+        private void CheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+            SecondNumber.IsEnabled = !SecondNumber.IsEnabled;
         }
     }
 }

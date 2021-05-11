@@ -1,4 +1,4 @@
-﻿<Window x:Class="WPF_AUT.MainWindow"
+﻿<Window xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"  x:Class="WPF_AUT.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -6,14 +6,29 @@
         xmlns:local="clr-namespace:WPF_AUT"
         mc:Ignorable="d"
         Title="WPF Calculator" Height="450" Width="800">
-    <StackPanel><TextBlock Text="Enter First Number" />
+
+    <StackPanel>
+        <TextBlock Name="DateText" />
+        <TextBlock Name="AppVersion" Text="2.0" />
+        <TextBlock Text="Enter Your Name" />
+        <!--<telerik:RadWatermarkTextBox WatermarkContent="Please enter your name" Name="New_Username"  />-->
+        <TextBox Name="Username" /><Button Content="Greet User " Click="Greeting_Action"/>
+        <TextBlock Text="Enter First Number" />
         <TextBox Height="23" TextWrapping="Wrap" Name="FirstNumber" />
         <TextBlock Text="Enter Second Number" />
         <TextBox Height="23" TextWrapping="Wrap" Name="SecondNumber" />
         <Button Content="Add Button" Click="Add_Button_Click" Name="Add_Button"/>
-        <Button Content="Substract Button"/>
+        <Button Content="Substract Button" Click="Substract_Button_Click" AutomationProperties.AutomationId="Substract_Button" />
+        <CheckBox Content="Second Text Box Enabled" IsChecked="False" Checked="CheckBox_Checked" Unchecked="CheckBox_Checked"/>
         <TextBlock TextWrapping="Wrap" Text="Results" Name="ResultsBlock" />
-
+        <!--<telerik:RadTreeView IsLineEnabled="True">
+            <telerik:RadTreeView.Items>
+                <telerik:RadTreeViewItem Header="Football" />
+                <telerik:RadTreeViewItem Header="Tennis" />
+                <telerik:RadTreeViewItem Header="Cycling" />
+                <telerik:RadTreeViewItem Header="Basketball" />
+            </telerik:RadTreeView.Items>
+        </telerik:RadTreeView>-->
     </StackPanel>
 
 </Window>
